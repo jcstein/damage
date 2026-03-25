@@ -409,13 +409,20 @@ const runtime = {
   map: null,
   areaLayers: new Map(),
   sourceLayer: null,
+  liveLayer: null,
+  liveEvents: [],
+  liveStats: null,
+  liveWindowHours: 24 * 7,
   hasInitialFit: false,
-  installPrompt: null
+  installPrompt: null,
+  pendingLivePopupId: null
 };
 
 const els = {
   priorityGrid: document.querySelector("#priority-grid"),
   sourceGrid: document.querySelector("#source-grid-inner"),
+  liveSummary: document.querySelector("#live-summary"),
+  liveEventsList: document.querySelector("#live-events-list"),
   resultsSummary: document.querySelector("#results-summary"),
   regionFilters: document.querySelector("#region-filters"),
   signalFilters: document.querySelector("#signal-filters"),
@@ -438,6 +445,15 @@ const els = {
 
 function normalize(text) {
   return String(text).toLowerCase().trim();
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 function buildPills(container, values, activeValue, onClick) {
@@ -496,6 +512,35 @@ function sourceMatches(source) {
 
 function getVisibleSources() {
   return sortSources(sources.filter(sourceMatches));
+}
+
+function liveEventMatches(event) {
+  const groups = Array.isArray(event.groups) ? event.groups : [];
+  const signals = Array.isArray(event.signals) ? event.signals : [];
+  const regionMatch =
+    state.region === "All" ||
+    event.region === state.region ||
+    groups.includes(state.region);
+
+  const signalMatch = state.signal === "All" || signals.includes(state.signal);
+
+  const haystack = normalize(
+    [
+      event.title,
+      event.summary,
+      event.region,
+      event.sourceName,
+      groups.join(" "),
+      signals.join(" ")
+    ].join(" ")
+  );
+  const queryMatch = !state.query || haystack.includes(normalize(state.query));
+  return regionMatch && signalMatch && queryMatch;
+}
+
+function getVisibleLiveEvents() {
+  const list = runtime.liveEvents.filter(liveEventMatches);
+  return list.sort((a, b) => new Date(b.eventTime) - new Date(a.eventTime));
 }
 
 function computeAreaStats(visibleSources) {
@@ -750,6 +795,132 @@ function renderMapPanel(visibleSources, areaStats) {
   });
 }
 
+function formatEventTime(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return "Unknown time";
+  }
+  return date.toLocaleString(undefined, {
+    dateStyle: "medium",
+    timeStyle: "short"
+  });
+}
+
+function liveTypeLabel(type) {
+  if (type === "thermal") {
+    return "Thermal";
+  }
+  if (type === "conflict") {
+    return "Conflict";
+  }
+  return "Analysis";
+}
+
+function showLiveEventOnMap(eventId) {
+  const event = runtime.liveEvents.find((entry) => entry.id === eventId);
+  if (!event || !runtime.map) {
+    return;
+  }
+
+  runtime.pendingLivePopupId = eventId;
+  state.activeSourceId = null;
+  state.activeAreaId = event.areaId || "global-hub";
+  renderAll();
+
+  runtime.map.setView([event.lat, event.lon], event.zoom || 6, { animate: true });
+  scrollMapIntoView();
+}
+
+function renderLiveEvents(visibleLiveEvents) {
+  if (!els.liveSummary || !els.liveEventsList) {
+    return;
+  }
+
+  const totalLoaded = runtime.liveEvents.length;
+  const visibleCount = visibleLiveEvents.length;
+  const windowDays = Math.round((runtime.liveWindowHours || 24 * 7) / 24);
+  els.liveSummary.textContent = `${visibleCount} live event${
+    visibleCount === 1 ? "" : "s"
+  } match your filters (${totalLoaded} ingested over ${windowDays} days).`;
+
+  els.liveEventsList.innerHTML = "";
+
+  if (!totalLoaded) {
+    const empty = document.createElement("div");
+    empty.className = "empty-state";
+    empty.textContent =
+      "No live ingest payload is available yet. The next refresh cycle will populate this feed.";
+    els.liveEventsList.appendChild(empty);
+    return;
+  }
+
+  if (!visibleCount) {
+    const empty = document.createElement("div");
+    empty.className = "empty-state";
+    empty.textContent =
+      "No live events match the current region, signal, or search filters.";
+    els.liveEventsList.appendChild(empty);
+    return;
+  }
+
+  visibleLiveEvents.slice(0, 30).forEach((event) => {
+    const card = document.createElement("article");
+    card.className = "live-event-card";
+
+    const topline = document.createElement("div");
+    topline.className = "live-event-topline";
+
+    const type = document.createElement("span");
+    type.className = `live-event-type is-${event.type || "analysis"}`;
+    type.textContent = liveTypeLabel(event.type);
+    topline.appendChild(type);
+
+    const time = document.createElement("span");
+    time.className = "live-event-time";
+    time.textContent = formatEventTime(event.eventTime);
+    topline.appendChild(time);
+
+    const title = document.createElement("h3");
+    title.className = "live-event-title";
+    title.textContent = event.title || "Untitled event";
+
+    const summary = document.createElement("p");
+    summary.className = "live-event-summary";
+    summary.textContent = event.summary || "No summary provided.";
+
+    const source = document.createElement("p");
+    source.className = "live-event-source";
+    source.textContent = `${event.region || "Global"} - ${
+      event.sourceName || "Source"
+    }`;
+
+    const actions = document.createElement("div");
+    actions.className = "live-event-actions";
+
+    const mapButton = document.createElement("button");
+    mapButton.type = "button";
+    mapButton.className = "button button-ghost";
+    mapButton.textContent = "Show On Map";
+    mapButton.addEventListener("click", () => {
+      showLiveEventOnMap(event.id);
+    });
+    actions.appendChild(mapButton);
+
+    if (event.link) {
+      const link = document.createElement("a");
+      link.className = "button button-primary";
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.href = event.link;
+      link.textContent = "Open Event";
+      actions.appendChild(link);
+    }
+
+    card.append(topline, title, summary, source, actions);
+    els.liveEventsList.appendChild(card);
+  });
+}
+
 function renderCard(source, priority = false) {
   const fragment = els.template.content.cloneNode(true);
   const card = fragment.querySelector(".source-card");
@@ -834,12 +1005,14 @@ function renderStats() {
     (source) => source.priority && source.primaryArea === "iran-gulf"
   ).length;
 
-  const nearRealtime = sources.filter(
+  const sourceNearRealtime = sources.filter(
     (source) =>
       source.cadence.includes("Within") ||
       source.cadence.includes("1-7 days") ||
       source.cadence.toLowerCase().includes("daily")
   ).length;
+
+  const nearRealtime = runtime.liveEvents.length || sourceNearRealtime;
 
   const open = sources.filter(
     (source) => !source.access.toLowerCase().includes("paid")
@@ -888,6 +1061,71 @@ function getAreaStyle(stat, active) {
     fillColor: hot ? "#b84b1f" : "#1b6e65",
     fillOpacity: active ? 0.12 : 0.08
   };
+}
+
+function getLiveMarkerStyle(event) {
+  const severity = event.severity || "low";
+  if (event.type === "thermal") {
+    return {
+      color: "#fff7f3",
+      weight: 1.4,
+      fillColor: severity === "high" ? "#b84b1f" : "#d2753e",
+      fillOpacity: 0.86,
+      radius: severity === "high" ? 6 : 5
+    };
+  }
+
+  if (event.type === "conflict") {
+    return {
+      color: "#fff8fb",
+      weight: 1.4,
+      fillColor: severity === "high" ? "#8f1f34" : "#aa3b52",
+      fillOpacity: 0.82,
+      radius: severity === "high" ? 6 : 5
+    };
+  }
+
+  return {
+    color: "#eefbf8",
+    weight: 1.3,
+    fillColor: "#1b6e65",
+    fillOpacity: 0.8,
+    radius: 5
+  };
+}
+
+function renderLiveLayer(visibleLiveEvents) {
+  if (!runtime.map) {
+    return;
+  }
+
+  if (!runtime.liveLayer) {
+    runtime.liveLayer = window.L.layerGroup().addTo(runtime.map);
+  }
+
+  runtime.liveLayer.clearLayers();
+
+  visibleLiveEvents.slice(0, 180).forEach((event) => {
+    const marker = window.L.circleMarker([event.lat, event.lon], getLiveMarkerStyle(event));
+    const popup = `
+      <strong>${escapeHtml(event.title || "Live event")}</strong><br>
+      ${escapeHtml(event.region || "Global")}<br>
+      ${escapeHtml(formatEventTime(event.eventTime))}<br>
+      <small>${escapeHtml(event.sourceName || "Source")}</small>${
+        event.link
+          ? `<br><a href="${escapeHtml(event.link)}" target="_blank" rel="noreferrer">Open event</a>`
+          : ""
+      }
+    `;
+
+    marker.bindPopup(popup);
+    marker.addTo(runtime.liveLayer);
+
+    if (runtime.pendingLivePopupId === event.id) {
+      marker.openPopup();
+      runtime.pendingLivePopupId = null;
+    }
+  });
 }
 
 function setupMap() {
@@ -940,7 +1178,7 @@ function setupMap() {
   });
 }
 
-function updateMap(visibleSources, areaStats) {
+function updateMap(visibleSources, areaStats, visibleLiveEvents) {
   if (!runtime.map) {
     return;
   }
@@ -979,23 +1217,24 @@ function updateMap(visibleSources, areaStats) {
   const activeSource = visibleSources.find((source) => source.id === state.activeSourceId);
   if (!activeSource) {
     runtime.sourceLayer = null;
-    return;
+  } else {
+    runtime.sourceLayer = window.L.circleMarker(activeSource.point, {
+      radius: 9,
+      color: "#fff7f3",
+      weight: 2,
+      fillColor: "#231612",
+      fillOpacity: 0.96
+    });
+
+    runtime.sourceLayer
+      .bindPopup(
+        `<strong>${activeSource.title}</strong><br>${activeSource.locationLabel}<br>${activeSource.freshness}`
+      )
+      .addTo(runtime.map)
+      .openPopup();
   }
 
-  runtime.sourceLayer = window.L.circleMarker(activeSource.point, {
-    radius: 9,
-    color: "#fff7f3",
-    weight: 2,
-    fillColor: "#231612",
-    fillOpacity: 0.96
-  });
-
-  runtime.sourceLayer
-    .bindPopup(
-      `<strong>${activeSource.title}</strong><br>${activeSource.locationLabel}<br>${activeSource.freshness}`
-    )
-    .addTo(runtime.map)
-    .openPopup();
+  renderLiveLayer(visibleLiveEvents);
 }
 
 function fitVisibleAreas(areaStats = computeAreaStats(getVisibleSources())) {
@@ -1128,6 +1367,36 @@ async function loadRefreshTimestamp() {
   }
 }
 
+async function loadLiveEvents() {
+  try {
+    const response = await fetch("./data/live-events.json", { cache: "no-store" });
+    if (!response.ok) {
+      return;
+    }
+
+    const payload = await response.json();
+    if (!payload || !Array.isArray(payload.events)) {
+      return;
+    }
+
+    runtime.liveEvents = payload.events
+      .map((event) => ({
+        ...event,
+        lat: Number(event.lat),
+        lon: Number(event.lon),
+        groups: Array.isArray(event.groups) ? event.groups : [event.region || "Global"],
+        signals: Array.isArray(event.signals) ? event.signals : []
+      }))
+      .filter(
+        (event) => Number.isFinite(event.lat) && Number.isFinite(event.lon) && event.eventTime
+      );
+
+    runtime.liveStats = payload.stats || null;
+    runtime.liveWindowHours = Number(payload.windowHours) || 24 * 7;
+  } catch (_) {
+  }
+}
+
 function clearLegacyServiceWorkers() {
   window.addEventListener("load", async () => {
     if ("serviceWorker" in navigator) {
@@ -1156,6 +1425,7 @@ function clearLegacyServiceWorkers() {
 
 function renderAll() {
   const visibleSources = getVisibleSources();
+  const visibleLiveEvents = getVisibleLiveEvents();
   const areaStats = computeAreaStats(visibleSources);
 
   ensureValidSelection(visibleSources, areaStats);
@@ -1163,8 +1433,9 @@ function renderAll() {
   renderStats();
   renderFilters();
   renderSources(visibleSources);
+  renderLiveEvents(visibleLiveEvents);
   renderMapPanel(visibleSources, areaStats);
-  updateMap(visibleSources, areaStats);
+  updateMap(visibleSources, areaStats, visibleLiveEvents);
 
   if (!runtime.hasInitialFit && runtime.map && visibleSources.length) {
     fitVisibleAreas(areaStats);
@@ -1172,14 +1443,15 @@ function renderAll() {
   }
 }
 
-function init() {
+async function init() {
   setupMap();
   setupSearch();
   setupMapControls();
   setupInstall();
   clearLegacyServiceWorkers();
   renderAll();
-  loadRefreshTimestamp();
+  await Promise.all([loadRefreshTimestamp(), loadLiveEvents()]);
+  renderAll();
 }
 
 init();

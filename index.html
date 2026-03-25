@@ -32,6 +32,7 @@
         <div class="hero-actions">
           <button id="install-button" class="button button-primary" hidden>Install App</button>
           <a class="button button-ghost" href="#map-board">Jump To Map</a>
+          <a class="button button-ghost" href="#live-board">Jump To Live</a>
           <a class="button button-ghost" href="#source-grid">Jump To Sources</a>
         </div>
       </header>
@@ -44,9 +45,9 @@
             <p>March 2026 items surfaced first.</p>
           </div>
           <div class="status-card">
-            <span class="status-label">Near-Real-Time</span>
+            <span class="status-label">Live Events</span>
             <strong id="realtime-count">0</strong>
-            <p>Feeds that can update inside hours or days.</p>
+            <p>Auto-ingested events from FIRMS, UN News, and CEOBS.</p>
           </div>
           <div class="status-card">
             <span class="status-label">Open Access</span>
@@ -56,7 +57,7 @@
           <div class="status-card">
             <span class="status-label">Last Refresh</span>
             <strong id="last-refresh-value">Checking...</strong>
-            <p>Auto-refresh runs every 6 hours via GitHub Actions.</p>
+            <p>Auto-refresh runs every 6 hours and rebuilds live event data.</p>
           </div>
         </section>
 
@@ -80,6 +81,7 @@
                 <div class="legend-row">
                   <span class="legend-chip legend-chip-hot">Fresh war-zone stack</span>
                   <span class="legend-chip">Baseline or slower monitor</span>
+                  <span class="legend-chip">Live ingest markers</span>
                 </div>
                 <p class="map-caption">Click a hotspot or a source card to focus the map.</p>
               </div>
@@ -97,6 +99,15 @@
               <div id="map-panel-list" class="map-panel-list" aria-live="polite"></div>
             </aside>
           </div>
+        </section>
+
+        <section id="live-board" class="live-board">
+          <div class="section-heading">
+            <p class="eyebrow">Live Ingest</p>
+            <h2>Auto-ingested map events</h2>
+          </div>
+          <p id="live-summary" class="results-summary">Loading live events...</p>
+          <div id="live-events-list" class="live-events-list" aria-live="polite"></div>
         </section>
 
         <section class="controls">

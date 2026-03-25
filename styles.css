@@ -62,6 +62,7 @@ input {
 .controls,
 .now-board,
 .map-board,
+.live-board,
 .source-section,
 .method-note {
   margin-bottom: 20px;
@@ -71,6 +72,7 @@ input {
 .controls,
 .now-board,
 .map-board,
+.live-board,
 .source-section,
 .method-note {
   border: 1px solid var(--line);
@@ -228,6 +230,7 @@ input {
 .controls,
 .now-board,
 .map-board,
+.live-board,
 .source-section,
 .method-note {
   padding: 24px;
@@ -543,6 +546,79 @@ input {
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
+.live-events-list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.live-event-card {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: #fff8f1;
+}
+
+.live-event-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.live-event-type {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 0 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.live-event-type.is-thermal {
+  color: #8d3210;
+  background: rgba(184, 75, 31, 0.14);
+}
+
+.live-event-type.is-conflict {
+  color: #6b1422;
+  background: rgba(128, 26, 43, 0.12);
+}
+
+.live-event-type.is-analysis {
+  color: #104e47;
+  background: rgba(27, 110, 101, 0.12);
+}
+
+.live-event-time,
+.live-event-source {
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+
+.live-event-title {
+  margin: 0;
+  font-size: 1.06rem;
+  line-height: 1.35;
+}
+
+.live-event-summary {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.live-event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
 .source-card:hover {
   transform: translateY(-1px);
 }
@@ -660,6 +736,7 @@ input {
   .map-layout,
   .status-band,
   .priority-grid,
+  .live-events-list,
   .source-grid,
   .note-grid,
   .card-meta {
@@ -682,6 +759,7 @@ input {
   .controls,
   .now-board,
   .map-board,
+  .live-board,
   .source-section,
   .method-note {
     padding: 18px;

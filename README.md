@@ -16,10 +16,15 @@ This repo deploys through `.github/workflows/pages.yml` on every push to `main`.
 
 ## Data Refresh (Every 6 Hours)
 
-`scripts/refresh-data.mjs` checks source links and writes:
+`scripts/refresh-data.mjs` checks source links and builds a live ingest payload from public feeds:
+
+- NASA FIRMS (global 24h thermal anomalies)
+- UN News Peace and Security RSS
+- CEOBS RSS
 
 - `data/refresh.json`
 - `data/link-health.json`
+- `data/live-events.json`
 
 Automation lives in `.github/workflows/refresh-data.yml` with cron:
 
