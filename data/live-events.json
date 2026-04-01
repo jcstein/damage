@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-31T18:17:33.942Z",
+  "generatedAt": "2026-04-01T00:20:20.076Z",
   "windowHours": 168,
   "reusedPreviousEvents": false,
   "sources": [
@@ -9,15 +9,15 @@
       "url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
       "ok": true,
       "count": 147,
-      "fetchedAt": "2026-03-31T18:17:33.942Z"
+      "fetchedAt": "2026-04-01T00:20:20.076Z"
     },
     {
       "id": "un_news_peace_security",
       "label": "UN News Peace and Security RSS",
       "url": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
       "ok": true,
-      "count": 21,
-      "fetchedAt": "2026-03-31T18:17:33.942Z"
+      "count": 22,
+      "fetchedAt": "2026-04-01T00:20:20.076Z"
     },
     {
       "id": "ceobs_rss",
@@ -25,27 +25,75 @@
       "url": "https://ceobs.org/feed/",
       "ok": true,
       "count": 1,
-      "fetchedAt": "2026-03-31T18:17:33.942Z"
+      "fetchedAt": "2026-04-01T00:20:20.076Z"
     }
   ],
   "stats": {
-    "totalEvents": 169,
+    "totalEvents": 170,
     "byType": {
       "thermal": 147,
-      "conflict": 21,
+      "conflict": 22,
       "analysis": 1
     },
     "byArea": {
+      "global-hub": 98,
       "iran-gulf": 27,
-      "global-hub": 97,
       "sudan": 19,
       "united-states": 4,
       "ukraine": 21,
       "gaza": 1
     },
-    "newestEventAt": "2026-03-31T16:39:00.000Z"
+    "newestEventAt": "2026-03-31T20:10:00.000Z"
   },
   "events": [
+    {
+      "id": "firms-3140609",
+      "type": "thermal",
+      "severity": "high",
+      "title": "FIRMS thermal anomaly",
+      "summary": "FRP 261.7 MW, brightness 378.6 K, satellite A",
+      "region": "Global",
+      "groups": [
+        "Global"
+      ],
+      "areaId": "global-hub",
+      "lat": -36.93418,
+      "lon": -71.92671,
+      "eventTime": "2026-03-31T20:10:00.000Z",
+      "sourceName": "NASA FIRMS",
+      "sourceUrl": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
+      "link": "https://firms.modaps.eosdis.nasa.gov/map/",
+      "signals": [
+        "Thermal",
+        "Oil Fires",
+        "Satellite"
+      ],
+      "frp": 261.68
+    },
+    {
+      "id": "firms-1b632142",
+      "type": "thermal",
+      "severity": "high",
+      "title": "FIRMS thermal anomaly",
+      "summary": "FRP 458.1 MW, brightness 347.0 K, satellite A",
+      "region": "Global",
+      "groups": [
+        "Global"
+      ],
+      "areaId": "global-hub",
+      "lat": -27.77888,
+      "lon": -56.2216,
+      "eventTime": "2026-03-31T18:34:00.000Z",
+      "sourceName": "NASA FIRMS",
+      "sourceUrl": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
+      "link": "https://firms.modaps.eosdis.nasa.gov/map/",
+      "signals": [
+        "Thermal",
+        "Oil Fires",
+        "Satellite"
+      ],
+      "frp": 458.06
+    },
     {
       "id": "firms-9e9eab5",
       "type": "thermal",
@@ -294,30 +342,6 @@
         "Satellite"
       ],
       "frp": 313.66
-    },
-    {
-      "id": "firms-4ec8a008",
-      "type": "thermal",
-      "severity": "high",
-      "title": "FIRMS thermal anomaly",
-      "summary": "FRP 188.9 MW, brightness 370.1 K, satellite A",
-      "region": "Global",
-      "groups": [
-        "Global"
-      ],
-      "areaId": "global-hub",
-      "lat": 41.77164,
-      "lon": -7.20572,
-      "eventTime": "2026-03-31T15:35:00.000Z",
-      "sourceName": "NASA FIRMS",
-      "sourceUrl": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
-      "link": "https://firms.modaps.eosdis.nasa.gov/map/",
-      "signals": [
-        "Thermal",
-        "Oil Fires",
-        "Satellite"
-      ],
-      "frp": 188.86
     },
     {
       "id": "firms-38cbf7f8",
@@ -583,6 +607,28 @@
         "Satellite"
       ],
       "frp": 379.21
+    },
+    {
+      "id": "un-1e8c15d1",
+      "type": "conflict",
+      "severity": "high",
+      "title": "Lebanon at ‘breaking point’ as displacement soars and strikes intensify",
+      "summary": "The UN’s top humanitarian official warned the Security Council on Tuesday that Lebanon is facing one of its most dangerous moments in years, with escalating violence, mass displacement and deepening human suffering pushing the country to “...",
+      "region": "Global",
+      "groups": [
+        "Global"
+      ],
+      "areaId": "global-hub",
+      "lat": 18.4704,
+      "lon": -28.156,
+      "eventTime": "2026-03-31T12:00:00.000Z",
+      "sourceName": "UN News",
+      "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
+      "link": "https://news.un.org/feed/view/en/story/2026/03/1167231",
+      "signals": [
+        "Conflict Events",
+        "Civilian Harm"
+      ]
     },
     {
       "id": "un-54d243a8",
@@ -3568,30 +3614,6 @@
         "Satellite"
       ],
       "frp": 198.51
-    },
-    {
-      "id": "firms-5bb2e224",
-      "type": "thermal",
-      "severity": "high",
-      "title": "FIRMS thermal anomaly",
-      "summary": "FRP 188.7 MW, brightness 342.1 K, satellite A",
-      "region": "Global",
-      "groups": [
-        "Global"
-      ],
-      "areaId": "global-hub",
-      "lat": -17.07747,
-      "lon": 126.56362,
-      "eventTime": "2026-03-30T06:29:00.000Z",
-      "sourceName": "NASA FIRMS",
-      "sourceUrl": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
-      "link": "https://firms.modaps.eosdis.nasa.gov/map/",
-      "signals": [
-        "Thermal",
-        "Oil Fires",
-        "Satellite"
-      ],
-      "frp": 188.67
     },
     {
       "id": "firms-78edca1c",
