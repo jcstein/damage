@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-18T12:09:51.781Z",
+  "generatedAt": "2026-04-18T18:29:12.573Z",
   "results": [
     {
       "id": "nasa-firms",
@@ -13,8 +13,8 @@
       "etag": "\"69ce9c3c-1822\"",
       "cacheControl": "no-cache",
       "contentType": "text/html",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 440
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 153
     },
     {
       "id": "ceobs-black-rain",
@@ -28,8 +28,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 2096
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 1890
     },
     {
       "id": "ceobs-epic-fury",
@@ -43,8 +43,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 1919
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 1542
     },
     {
       "id": "acled-iran",
@@ -58,8 +58,8 @@
       "etag": null,
       "cacheControl": "max-age=1800, public",
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 248
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 245
     },
     {
       "id": "world-bank-flaring",
@@ -73,8 +73,8 @@
       "etag": null,
       "cacheControl": "public, max-age=60",
       "contentType": "text/html;charset=utf-8",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 128
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 185
     },
     {
       "id": "emit-catalog",
@@ -88,8 +88,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 158
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 188
     },
     {
       "id": "epa-methane",
@@ -103,8 +103,8 @@
       "etag": null,
       "cacheControl": "private, max-age=0, must-revalidate, must-revalidate, no-cache, private",
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 430
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 247
     },
     {
       "id": "ceobs-ukraine",
@@ -118,8 +118,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 2271
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 1381
     },
     {
       "id": "airwars-gaza",
@@ -133,8 +133,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 378
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 494
     },
     {
       "id": "unosat-gaza-city",
@@ -148,8 +148,8 @@
       "etag": "\"68e63af9-2b566a\"",
       "cacheControl": "max-age=2592000, public, private",
       "contentType": "application/pdf",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 819
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 784
     },
     {
       "id": "ceobs-sudan",
@@ -163,8 +163,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-04-18T12:09:51.781Z",
-      "responseTimeMs": 2482
+      "checkedAt": "2026-04-18T18:29:12.573Z",
+      "responseTimeMs": 1655
     }
   ]
 }
