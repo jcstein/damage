@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-05T18:28:30.070Z",
+  "generatedAt": "2026-05-06T00:27:34.629Z",
   "windowHours": 720,
   "reusedPreviousEvents": false,
   "sources": [
@@ -9,7 +9,7 @@
       "url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
       "ok": true,
       "count": 5106,
-      "fetchedAt": "2026-05-05T18:28:30.070Z"
+      "fetchedAt": "2026-05-06T00:27:34.629Z"
     },
     {
       "id": "un_news_peace_security",
@@ -17,7 +17,7 @@
       "url": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
       "ok": true,
       "count": 30,
-      "fetchedAt": "2026-05-05T18:28:30.070Z"
+      "fetchedAt": "2026-05-06T00:27:34.629Z"
     },
     {
       "id": "ceobs_rss",
@@ -25,7 +25,7 @@
       "url": "https://ceobs.org/feed/",
       "ok": true,
       "count": 5,
-      "fetchedAt": "2026-05-05T18:28:30.070Z"
+      "fetchedAt": "2026-05-06T00:27:34.629Z"
     }
   ],
   "stats": {
@@ -36,9 +36,9 @@
       "analysis": 5
     },
     "byArea": {
-      "global-hub": 4788,
+      "iran-gulf": 139,
+      "global-hub": 4787,
       "sudan": 84,
-      "iran-gulf": 138,
       "ukraine": 126,
       "gaza": 4,
       "united-states": 1
@@ -46,6 +46,29 @@
     "newestEventAt": "2026-05-05T12:00:00.000Z"
   },
   "events": [
+    {
+      "id": "un-2ce5a0ed",
+      "type": "conflict",
+      "severity": "high",
+      "title": "World News in Brief: Gulf tensions rise, Gaza health needs ‘staggering’, skills gap threat",
+      "summary": "The UN has expressed deep concern over escalating security incidents in the Gulf, warning that recent attacks risk undermining efforts to maintain regional stability.",
+      "region": "Iran / Gulf",
+      "groups": [
+        "Iran / Gulf",
+        "Global"
+      ],
+      "areaId": "iran-gulf",
+      "lat": 30.318399999999997,
+      "lon": 52.77,
+      "eventTime": "2026-05-05T12:00:00.000Z",
+      "sourceName": "UN News",
+      "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
+      "link": "https://news.un.org/feed/view/en/story/2026/05/1167447",
+      "signals": [
+        "Conflict Events",
+        "Civilian Harm"
+      ]
+    },
     {
       "id": "un-79426490",
       "type": "conflict",
@@ -138,6 +161,30 @@
         "Satellite"
       ],
       "frp": 498.48
+    },
+    {
+      "id": "firms-3eaf865d",
+      "type": "thermal",
+      "severity": "medium",
+      "title": "FIRMS thermal anomaly",
+      "summary": "FRP 48.0 MW, brightness 313.5 K, satellite T",
+      "region": "Global",
+      "groups": [
+        "Global"
+      ],
+      "areaId": "global-hub",
+      "lat": 13.0019,
+      "lon": -13.7103,
+      "eventTime": "2026-05-05T10:34:00.000Z",
+      "sourceName": "NASA FIRMS",
+      "sourceUrl": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
+      "link": "https://firms.modaps.eosdis.nasa.gov/map/",
+      "signals": [
+        "Thermal",
+        "Oil Fires",
+        "Satellite"
+      ],
+      "frp": 48
     },
     {
       "id": "firms-13ce1b61",
@@ -55615,30 +55662,6 @@
         "Satellite"
       ],
       "frp": 38.34
-    },
-    {
-      "id": "firms-38189920",
-      "type": "thermal",
-      "severity": "medium",
-      "title": "FIRMS thermal anomaly",
-      "summary": "FRP 38.8 MW, brightness 333.1 K, satellite A",
-      "region": "Global",
-      "groups": [
-        "Global"
-      ],
-      "areaId": "global-hub",
-      "lat": 13.00425,
-      "lon": -13.74499,
-      "eventTime": "2026-05-04T15:46:00.000Z",
-      "sourceName": "NASA FIRMS",
-      "sourceUrl": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
-      "link": "https://firms.modaps.eosdis.nasa.gov/map/",
-      "signals": [
-        "Thermal",
-        "Oil Fires",
-        "Satellite"
-      ],
-      "frp": 38.78
     },
     {
       "id": "firms-2850d6dc",
@@ -123609,29 +123632,6 @@
       "signals": [
         "Conflict Events",
         "Civilian Harm"
-      ]
-    },
-    {
-      "id": "un-63cf07f5",
-      "type": "conflict",
-      "severity": "low",
-      "title": "South Pacific islanders strive to rescue their home from toxic legacy",
-      "summary": "More than 80 years after World War Two, the Solomon Islands remain one of the most heavily mine-contaminated places in the Pacific.",
-      "region": "Global",
-      "groups": [
-        "Global"
-      ],
-      "areaId": "global-hub",
-      "lat": 18.1816,
-      "lon": -26.8672,
-      "eventTime": "2026-04-25T12:00:00.000Z",
-      "sourceName": "UN News",
-      "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
-      "link": "https://news.un.org/feed/view/en/story/2026/04/1167381",
-      "signals": [
-        "Conflict Events",
-        "Civilian Harm",
-        "Environmental Risk"
       ]
     },
     {
