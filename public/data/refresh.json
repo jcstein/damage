@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-07T00:36:41.634Z",
+  "generatedAt": "2026-06-07T07:21:24.705Z",
   "totalSources": 11,
-  "healthySources": 7,
-  "failingSources": 4,
+  "healthySources": 8,
+  "failingSources": 3,
   "liveEventsTotal": 34,
   "liveEventsByType": {
     "conflict": 30,
