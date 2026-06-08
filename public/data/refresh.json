@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-06-08T00:38:13.260Z",
+  "generatedAt": "2026-06-08T07:38:02.541Z",
   "totalSources": 11,
   "healthySources": 10,
   "failingSources": 1,
-  "liveEventsTotal": 5327,
+  "liveEventsTotal": 3059,
   "liveEventsByType": {
-    "thermal": 5293,
+    "thermal": 3025,
     "conflict": 30,
     "analysis": 4
   },
