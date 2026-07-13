@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-07-13T02:00:17.452Z",
+  "generatedAt": "2026-07-13T08:53:19.117Z",
   "totalSources": 11,
-  "healthySources": 8,
-  "failingSources": 3,
-  "liveEventsTotal": 30,
+  "healthySources": 9,
+  "failingSources": 2,
+  "liveEventsTotal": 31,
   "liveEventsByType": {
+    "analysis": 1,
     "conflict": 30
   },
   "liveSourcesHealthy": 2,

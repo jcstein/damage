@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T02:00:17.452Z",
+  "generatedAt": "2026-07-13T08:53:19.117Z",
   "windowHours": 720,
   "reusedPreviousEvents": false,
   "sources": [
@@ -9,7 +9,7 @@
       "url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
       "ok": false,
       "count": 0,
-      "fetchedAt": "2026-07-13T02:00:17.452Z",
+      "fetchedAt": "2026-07-13T08:53:19.117Z",
       "error": "fetch failed"
     },
     {
@@ -18,32 +18,57 @@
       "url": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
       "ok": true,
       "count": 30,
-      "fetchedAt": "2026-07-13T02:00:17.452Z"
+      "fetchedAt": "2026-07-13T08:53:19.117Z"
     },
     {
       "id": "ceobs_rss",
       "label": "CEOBS RSS",
       "url": "https://ceobs.org/feed/",
       "ok": true,
-      "count": 0,
-      "fetchedAt": "2026-07-13T02:00:17.452Z"
+      "count": 1,
+      "fetchedAt": "2026-07-13T08:53:19.117Z"
     }
   ],
   "stats": {
-    "totalEvents": 30,
+    "totalEvents": 31,
     "byType": {
+      "analysis": 1,
       "conflict": 30
     },
     "byArea": {
+      "global-hub": 9,
       "iran-gulf": 9,
       "sudan": 4,
-      "global-hub": 8,
       "ukraine": 6,
       "gaza": 3
     },
-    "newestEventAt": "2026-07-12T12:00:00.000Z"
+    "newestEventAt": "2026-07-13T08:17:18.000Z"
   },
   "events": [
+    {
+      "id": "ceobs-656c5bb7",
+      "type": "analysis",
+      "severity": "low",
+      "title": "WISEN: A tool for post-war environmental accountability?",
+      "summary": "CEOBS’ WISEN tool can help systematically identify and map conflict-linked environmental harm. Lydia Millar explores how this data could be used to improve accountability at local, national and international levels, and the challenges of h...",
+      "region": "Global",
+      "groups": [
+        "Global"
+      ],
+      "areaId": "global-hub",
+      "lat": 17.6,
+      "lon": -27.3556,
+      "eventTime": "2026-07-13T08:17:18.000Z",
+      "sourceName": "CEOBS",
+      "sourceUrl": "https://ceobs.org/feed/",
+      "link": "https://ceobs.org/wisen-a-tool-for-post-war-environmental-accountability/?utm_source=rss&utm_medium=rss&utm_campaign=wisen-a-tool-for-post-war-environmental-accountability",
+      "signals": [
+        "Environmental Risk",
+        "Oil Fires",
+        "Air",
+        "Water"
+      ]
+    },
     {
       "id": "un-20664c93",
       "type": "conflict",
