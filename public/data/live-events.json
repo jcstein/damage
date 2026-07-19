@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T12:58:34.039Z",
+  "generatedAt": "2026-07-19T18:54:12.500Z",
   "windowHours": 720,
   "reusedPreviousEvents": false,
   "sources": [
@@ -9,7 +9,7 @@
       "url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
       "ok": false,
       "count": 0,
-      "fetchedAt": "2026-07-19T12:58:34.039Z",
+      "fetchedAt": "2026-07-19T18:54:12.500Z",
       "error": "fetch failed"
     },
     {
@@ -18,7 +18,7 @@
       "url": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
       "ok": true,
       "count": 30,
-      "fetchedAt": "2026-07-19T12:58:34.039Z"
+      "fetchedAt": "2026-07-19T18:54:12.500Z"
     },
     {
       "id": "ceobs_rss",
@@ -26,7 +26,7 @@
       "url": "https://ceobs.org/feed/",
       "ok": true,
       "count": 1,
-      "fetchedAt": "2026-07-19T12:58:34.039Z"
+      "fetchedAt": "2026-07-19T18:54:12.500Z"
     }
   ],
   "stats": {
@@ -36,15 +36,37 @@
       "analysis": 1
     },
     "byArea": {
+      "global-hub": 12,
       "iran-gulf": 11,
-      "global-hub": 11,
       "sudan": 5,
       "gaza": 2,
-      "ukraine": 2
+      "ukraine": 1
     },
-    "newestEventAt": "2026-07-17T12:00:00.000Z"
+    "newestEventAt": "2026-07-19T12:00:00.000Z"
   },
   "events": [
+    {
+      "id": "un-1bc77a29",
+      "type": "conflict",
+      "severity": "low",
+      "title": "Haiti: Signs of hope despite gang violence and political uncertainty",
+      "summary": "For millions of Haitians, daily life has become a struggle to stay safe, find enough food and simply move around their own neighbourhood.",
+      "region": "Global",
+      "groups": [
+        "Global"
+      ],
+      "areaId": "global-hub",
+      "lat": 18.2704,
+      "lon": -27.3748,
+      "eventTime": "2026-07-19T12:00:00.000Z",
+      "sourceName": "UN News",
+      "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
+      "link": "https://news.un.org/feed/view/en/story/2026/07/1167963",
+      "signals": [
+        "Conflict Events",
+        "Civilian Harm"
+      ]
+    },
     {
       "id": "un-594c29db",
       "type": "conflict",
@@ -728,29 +750,6 @@
         "Conflict Events",
         "Civilian Harm",
         "Environmental Risk"
-      ]
-    },
-    {
-      "id": "un-1ba296ce",
-      "type": "conflict",
-      "severity": "high",
-      "title": "Ukraine: Latest Russian assault leaves at least 14 dead in Kyiv",
-      "summary": "Russian strikes on the Ukrainian capital Kyiv killed at least 14 civilians and injured more than 80 others overnight on Monday, according to local authorities.",
-      "region": "Ukraine",
-      "groups": [
-        "Ukraine",
-        "Global"
-      ],
-      "areaId": "ukraine",
-      "lat": 49.5584,
-      "lon": 30.462799999999998,
-      "eventTime": "2026-07-06T12:00:00.000Z",
-      "sourceName": "UN News",
-      "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
-      "link": "https://news.un.org/feed/view/en/story/2026/07/1167875",
-      "signals": [
-        "Conflict Events",
-        "Civilian Harm"
       ]
     }
   ]
