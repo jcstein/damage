@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T08:24:19.069Z",
+  "generatedAt": "2026-08-04T13:51:27.977Z",
   "results": [
     {
       "id": "nasa-firms",
@@ -9,28 +9,27 @@
       "statusText": "OK",
       "finalUrl": "https://firms.modaps.eosdis.nasa.gov/map/",
       "method": "HEAD",
-      "lastModified": "Mon, 03 Aug 2026 13:50:34 GMT",
-      "etag": "\"6a709caa-1822\"",
+      "lastModified": "Mon, 03 Aug 2026 13:50:45 GMT",
+      "etag": "\"6a709cb5-1822\"",
       "cacheControl": "no-cache",
       "contentType": "text/html",
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 791
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 470
     },
     {
       "id": "ceobs-iran-update",
       "url": "https://ceobs.org/iran-war-environmental-risk-overview-as-of-27th-march/",
-      "ok": false,
-      "status": null,
-      "statusText": null,
-      "finalUrl": null,
-      "method": "GET",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK",
+      "finalUrl": "https://ceobs.org/iran-war-environmental-risk-overview-as-of-27th-march/",
+      "method": "HEAD",
       "lastModified": null,
       "etag": null,
       "cacheControl": null,
-      "contentType": null,
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 793,
-      "error": "fetch failed"
+      "contentType": "text/html; charset=UTF-8",
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 1715
     },
     {
       "id": "acled-60-days-iran",
@@ -40,12 +39,12 @@
       "statusText": "OK",
       "finalUrl": "https://acleddata.com/expert-comment/60-days-iran-war-6-conflicts-you-didnt-see",
       "method": "HEAD",
-      "lastModified": null,
+      "lastModified": "Tue, 04 Aug 2026 11:45:28 GMT",
       "etag": null,
-      "cacheControl": "private, no-cache, no-store, must-revalidate, max-age=0",
-      "contentType": "text/html",
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 258
+      "cacheControl": "max-age=1800, public",
+      "contentType": "text/html; charset=UTF-8",
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 242
     },
     {
       "id": "acled-iran-live",
@@ -55,12 +54,12 @@
       "statusText": "OK",
       "finalUrl": "https://acleddata.com/iran-crisis-live",
       "method": "HEAD",
-      "lastModified": null,
+      "lastModified": "Tue, 04 Aug 2026 12:09:54 GMT",
       "etag": null,
-      "cacheControl": "private, no-cache, no-store, must-revalidate, max-age=0",
-      "contentType": "text/html",
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 183
+      "cacheControl": "max-age=1800, public",
+      "contentType": "text/html; charset=UTF-8",
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 225
     },
     {
       "id": "world-bank-flaring",
@@ -74,8 +73,8 @@
       "etag": null,
       "cacheControl": "public, max-age=1",
       "contentType": "text/html;charset=utf-8",
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 220
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 189
     },
     {
       "id": "emit-catalog",
@@ -89,8 +88,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html",
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 129
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 100
     },
     {
       "id": "epa-methane",
@@ -104,24 +103,23 @@
       "etag": null,
       "cacheControl": "private, max-age=0, must-revalidate, must-revalidate, no-cache, private",
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 332
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 395
     },
     {
       "id": "ceobs-ukraine",
       "url": "https://ceobs.org/ukraine-map/",
-      "ok": false,
-      "status": null,
-      "statusText": null,
-      "finalUrl": null,
-      "method": "GET",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK",
+      "finalUrl": "https://ceobs.org/ukraine-map/",
+      "method": "HEAD",
       "lastModified": null,
       "etag": null,
       "cacheControl": null,
-      "contentType": null,
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 506,
-      "error": "fetch failed"
+      "contentType": "text/html; charset=UTF-8",
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 1519
     },
     {
       "id": "airwars-gaza",
@@ -135,8 +133,8 @@
       "etag": null,
       "cacheControl": "no-cache, no-store, must-revalidate",
       "contentType": "text/html; charset=utf-8",
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 83
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 325
     },
     {
       "id": "unosat-gaza-city",
@@ -150,24 +148,23 @@
       "etag": "\"68e63af9-2b566a\"",
       "cacheControl": "max-age=2592000, public, private",
       "contentType": "application/pdf",
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 901
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 793
     },
     {
       "id": "ceobs-sudan",
       "url": "https://ceobs.org/the-environmental-costs-of-the-war-in-sudan/",
-      "ok": false,
-      "status": null,
-      "statusText": null,
-      "finalUrl": null,
-      "method": "GET",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK",
+      "finalUrl": "https://ceobs.org/the-environmental-costs-of-the-war-in-sudan/",
+      "method": "HEAD",
       "lastModified": null,
       "etag": null,
       "cacheControl": null,
-      "contentType": null,
-      "checkedAt": "2026-08-04T08:24:19.069Z",
-      "responseTimeMs": 506,
-      "error": "fetch failed"
+      "contentType": "text/html; charset=UTF-8",
+      "checkedAt": "2026-08-04T13:51:27.977Z",
+      "responseTimeMs": 1614
     }
   ]
 }
