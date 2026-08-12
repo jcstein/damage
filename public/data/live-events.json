@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T12:50:41.560Z",
+  "generatedAt": "2026-08-12T18:51:10.920Z",
   "windowHours": 720,
   "reusedPreviousEvents": false,
   "sources": [
@@ -9,7 +9,7 @@
       "url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
       "ok": false,
       "count": 0,
-      "fetchedAt": "2026-08-12T12:50:41.560Z",
+      "fetchedAt": "2026-08-12T18:51:10.920Z",
       "error": "fetch failed"
     },
     {
@@ -18,7 +18,7 @@
       "url": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
       "ok": true,
       "count": 30,
-      "fetchedAt": "2026-08-12T12:50:41.560Z"
+      "fetchedAt": "2026-08-12T18:51:10.920Z"
     },
     {
       "id": "ceobs_rss",
@@ -26,7 +26,7 @@
       "url": "https://ceobs.org/feed/",
       "ok": true,
       "count": 0,
-      "fetchedAt": "2026-08-12T12:50:41.560Z"
+      "fetchedAt": "2026-08-12T18:51:10.920Z"
     }
   ],
   "stats": {
@@ -35,16 +35,39 @@
       "conflict": 30
     },
     "byArea": {
+      "iran-gulf": 4,
       "sudan": 6,
       "gaza": 5,
-      "global-hub": 9,
+      "global-hub": 8,
       "ukraine": 6,
-      "united-states": 1,
-      "iran-gulf": 3
+      "united-states": 1
     },
-    "newestEventAt": "2026-08-11T12:00:00.000Z"
+    "newestEventAt": "2026-08-12T12:00:00.000Z"
   },
   "events": [
+    {
+      "id": "un-9f203db",
+      "type": "conflict",
+      "severity": "high",
+      "title": "Deadly attack on Red Sea ship adds to global supply chain uncertainty",
+      "summary": "A strike on a merchant ship off the southern coast of Yemen that reportedly killed several seafarers on Tuesday threatens to reignite deep concerns about global trade, amid the ongoing Iran-US war that has choked shipping in the Strait of...",
+      "region": "Iran / Gulf",
+      "groups": [
+        "Iran / Gulf",
+        "Global"
+      ],
+      "areaId": "iran-gulf",
+      "lat": 31.027199999999997,
+      "lon": 51.7836,
+      "eventTime": "2026-08-12T12:00:00.000Z",
+      "sourceName": "UN News",
+      "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
+      "link": "https://news.un.org/feed/view/en/story/2026/08/1168121",
+      "signals": [
+        "Conflict Events",
+        "Civilian Harm"
+      ]
+    },
     {
       "id": "un-6d654da0",
       "type": "conflict",
@@ -704,28 +727,6 @@
       "sourceName": "UN News",
       "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
       "link": "https://news.un.org/feed/view/en/story/2026/07/1168049",
-      "signals": [
-        "Conflict Events",
-        "Civilian Harm"
-      ]
-    },
-    {
-      "id": "un-95bdec5",
-      "type": "conflict",
-      "severity": "medium",
-      "title": "Cyprus: Guterres calls for renewed trust and a new meeting on the way forward",
-      "summary": "The United Nations Secretary-General said on Wednesday that he plans to convene fresh talks on Cyprus to resolve the decades-long division on the Mediterranean island, stressing that the moment calls for rebuilding trust between its two co...",
-      "region": "Global",
-      "groups": [
-        "Global"
-      ],
-      "areaId": "global-hub",
-      "lat": 18.3472,
-      "lon": -28.228,
-      "eventTime": "2026-07-29T12:00:00.000Z",
-      "sourceName": "UN News",
-      "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
-      "link": "https://news.un.org/feed/view/en/story/2026/07/1168048",
       "signals": [
         "Conflict Events",
         "Civilian Harm"
