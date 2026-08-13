@@ -1,9 +1,24 @@
 {
-  "generatedAt": "2026-08-12T18:51:10.920Z",
+  "generatedAt": "2026-08-13T01:15:36.339Z",
   "results": [
     {
       "id": "nasa-firms",
       "url": "https://firms.modaps.eosdis.nasa.gov/map/",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK",
+      "finalUrl": "https://firms.modaps.eosdis.nasa.gov/map/",
+      "method": "HEAD",
+      "lastModified": "Wed, 05 Aug 2026 17:30:29 GMT",
+      "etag": "\"6a737335-1822\"",
+      "cacheControl": "no-cache",
+      "contentType": "text/html",
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 434
+    },
+    {
+      "id": "ceobs-iran-update",
+      "url": "https://ceobs.org/iran-war-environmental-risk-overview-as-of-27th-march/",
       "ok": false,
       "status": null,
       "statusText": null,
@@ -13,24 +28,9 @@
       "etag": null,
       "cacheControl": null,
       "contentType": null,
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 575,
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 671,
       "error": "fetch failed"
-    },
-    {
-      "id": "ceobs-iran-update",
-      "url": "https://ceobs.org/iran-war-environmental-risk-overview-as-of-27th-march/",
-      "ok": true,
-      "status": 200,
-      "statusText": "OK",
-      "finalUrl": "https://ceobs.org/iran-war-environmental-risk-overview-as-of-27th-march/",
-      "method": "HEAD",
-      "lastModified": null,
-      "etag": null,
-      "cacheControl": null,
-      "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 1451
     },
     {
       "id": "acled-60-days-iran",
@@ -40,12 +40,12 @@
       "statusText": "OK",
       "finalUrl": "https://acleddata.com/expert-comment/60-days-iran-war-6-conflicts-you-didnt-see",
       "method": "HEAD",
-      "lastModified": "Wed, 12 Aug 2026 14:38:48 GMT",
+      "lastModified": null,
       "etag": null,
-      "cacheControl": "max-age=1800, public",
-      "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 246
+      "cacheControl": "private, no-cache, no-store, must-revalidate, max-age=0",
+      "contentType": "text/html",
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 191
     },
     {
       "id": "acled-iran-live",
@@ -55,12 +55,12 @@
       "statusText": "OK",
       "finalUrl": "https://acleddata.com/iran-crisis-live",
       "method": "HEAD",
-      "lastModified": "Wed, 12 Aug 2026 14:38:52 GMT",
+      "lastModified": null,
       "etag": null,
-      "cacheControl": "max-age=1800, public",
-      "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 166
+      "cacheControl": "private, no-cache, no-store, must-revalidate, max-age=0",
+      "contentType": "text/html",
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 161
     },
     {
       "id": "world-bank-flaring",
@@ -70,12 +70,12 @@
       "statusText": "OK",
       "finalUrl": "https://www.worldbank.org/en/programs/gasflaringreduction/global-flaring-data",
       "method": "HEAD",
-      "lastModified": "Wed, 12 Aug 2026 01:50:40 GMT",
+      "lastModified": "Wed, 12 Aug 2026 03:35:42 GMT",
       "etag": null,
       "cacheControl": "public, max-age=1",
       "contentType": "text/html;charset=utf-8",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 117
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 69
     },
     {
       "id": "emit-catalog",
@@ -89,8 +89,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 142
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 51
     },
     {
       "id": "epa-methane",
@@ -104,23 +104,24 @@
       "etag": null,
       "cacheControl": "private, max-age=0, must-revalidate, must-revalidate, no-cache, private",
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 73
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 907
     },
     {
       "id": "ceobs-ukraine",
       "url": "https://ceobs.org/ukraine-map/",
-      "ok": true,
-      "status": 200,
-      "statusText": "OK",
-      "finalUrl": "https://ceobs.org/ukraine-map/",
-      "method": "HEAD",
+      "ok": false,
+      "status": null,
+      "statusText": null,
+      "finalUrl": null,
+      "method": "GET",
       "lastModified": null,
       "etag": null,
       "cacheControl": null,
-      "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 1323
+      "contentType": null,
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 505,
+      "error": "fetch failed"
     },
     {
       "id": "airwars-gaza",
@@ -134,8 +135,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 951
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 3859
     },
     {
       "id": "unosat-gaza-city",
@@ -149,23 +150,24 @@
       "etag": "\"68e63af9-2b566a\"",
       "cacheControl": "max-age=2592000, public, private",
       "contentType": "application/pdf",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 406
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 1072
     },
     {
       "id": "ceobs-sudan",
       "url": "https://ceobs.org/the-environmental-costs-of-the-war-in-sudan/",
-      "ok": true,
-      "status": 200,
-      "statusText": "OK",
-      "finalUrl": "https://ceobs.org/the-environmental-costs-of-the-war-in-sudan/",
-      "method": "HEAD",
+      "ok": false,
+      "status": null,
+      "statusText": null,
+      "finalUrl": null,
+      "method": "GET",
       "lastModified": null,
       "etag": null,
       "cacheControl": null,
-      "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-12T18:51:10.920Z",
-      "responseTimeMs": 1572
+      "contentType": null,
+      "checkedAt": "2026-08-13T01:15:36.339Z",
+      "responseTimeMs": 505,
+      "error": "fetch failed"
     }
   ]
 }
