@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T12:34:40.957Z",
+  "generatedAt": "2026-08-26T19:38:36.852Z",
   "results": [
     {
       "id": "nasa-firms",
@@ -9,12 +9,12 @@
       "statusText": "OK",
       "finalUrl": "https://firms.modaps.eosdis.nasa.gov/map/",
       "method": "HEAD",
-      "lastModified": "Tue, 25 Aug 2026 15:19:30 GMT",
-      "etag": "\"6a8db282-1822\"",
+      "lastModified": "Tue, 25 Aug 2026 15:19:44 GMT",
+      "etag": "\"6a8db290-1822\"",
       "cacheControl": "no-cache",
       "contentType": "text/html",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 340
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 117
     },
     {
       "id": "ceobs-iran-update",
@@ -28,8 +28,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 2434
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 3492
     },
     {
       "id": "acled-60-days-iran",
@@ -39,12 +39,12 @@
       "statusText": "OK",
       "finalUrl": "https://acleddata.com/expert-comment/60-days-iran-war-6-conflicts-you-didnt-see",
       "method": "HEAD",
-      "lastModified": "Wed, 26 Aug 2026 09:12:02 GMT",
+      "lastModified": "Wed, 26 Aug 2026 15:54:25 GMT",
       "etag": null,
       "cacheControl": "max-age=1800, public",
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 305
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 278
     },
     {
       "id": "acled-iran-live",
@@ -54,12 +54,12 @@
       "statusText": "OK",
       "finalUrl": "https://acleddata.com/iran-crisis-live",
       "method": "HEAD",
-      "lastModified": "Wed, 26 Aug 2026 12:17:32 GMT",
+      "lastModified": "Wed, 26 Aug 2026 14:25:11 GMT",
       "etag": null,
       "cacheControl": "max-age=1800, public",
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 266
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 163
     },
     {
       "id": "world-bank-flaring",
@@ -69,12 +69,12 @@
       "statusText": "OK",
       "finalUrl": "https://www.worldbank.org/en/programs/gasflaringreduction/global-flaring-data",
       "method": "HEAD",
-      "lastModified": "Wed, 26 Aug 2026 03:20:00 GMT",
+      "lastModified": "Wed, 26 Aug 2026 01:50:44 GMT",
       "etag": null,
       "cacheControl": "public, max-age=1",
       "contentType": "text/html;charset=utf-8",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 181
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 87
     },
     {
       "id": "emit-catalog",
@@ -88,8 +88,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 211
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 144
     },
     {
       "id": "epa-methane",
@@ -103,8 +103,8 @@
       "etag": null,
       "cacheControl": "private, max-age=0, must-revalidate, must-revalidate, no-cache, private",
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 964
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 804
     },
     {
       "id": "ceobs-ukraine",
@@ -118,24 +118,23 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 1564
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 1409
     },
     {
       "id": "airwars-gaza",
       "url": "https://airwars.org/israel-and-gaza-2023-25-casualty-map/",
-      "ok": false,
-      "status": null,
-      "statusText": null,
-      "finalUrl": null,
-      "method": "GET",
+      "ok": true,
+      "status": 200,
+      "statusText": "OK",
+      "finalUrl": "https://airwars.org/israel-and-gaza-2023-25-casualty-map/",
+      "method": "HEAD",
       "lastModified": null,
       "etag": null,
       "cacheControl": null,
-      "contentType": null,
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 601569,
-      "error": "fetch failed"
+      "contentType": "text/html",
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 752
     },
     {
       "id": "unosat-gaza-city",
@@ -149,8 +148,8 @@
       "etag": "\"68e63af9-2b566a\"",
       "cacheControl": "max-age=2592000, public, private",
       "contentType": "application/pdf",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 1385
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 797
     },
     {
       "id": "ceobs-sudan",
@@ -164,8 +163,8 @@
       "etag": null,
       "cacheControl": null,
       "contentType": "text/html; charset=UTF-8",
-      "checkedAt": "2026-08-26T12:34:40.957Z",
-      "responseTimeMs": 1659
+      "checkedAt": "2026-08-26T19:38:36.852Z",
+      "responseTimeMs": 1792
     }
   ]
 }
