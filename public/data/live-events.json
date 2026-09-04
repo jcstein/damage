@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T20:20:13.273Z",
+  "generatedAt": "2026-09-04T02:14:47.043Z",
   "windowHours": 720,
   "reusedPreviousEvents": false,
   "sources": [
@@ -9,7 +9,7 @@
       "url": "https://firms.modaps.eosdis.nasa.gov/data/active_fire/c6.1/csv/MODIS_C6_1_Global_24h.csv",
       "ok": true,
       "count": 12235,
-      "fetchedAt": "2026-09-03T20:20:13.273Z"
+      "fetchedAt": "2026-09-04T02:14:47.043Z"
     },
     {
       "id": "un_news_peace_security",
@@ -17,7 +17,7 @@
       "url": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
       "ok": true,
       "count": 30,
-      "fetchedAt": "2026-09-03T20:20:13.273Z"
+      "fetchedAt": "2026-09-04T02:14:47.043Z"
     },
     {
       "id": "ceobs_rss",
@@ -25,7 +25,7 @@
       "url": "https://ceobs.org/feed/",
       "ok": true,
       "count": 1,
-      "fetchedAt": "2026-09-03T20:20:13.273Z"
+      "fetchedAt": "2026-09-04T02:14:47.043Z"
     }
   ],
   "stats": {
@@ -36,12 +36,12 @@
       "analysis": 1
     },
     "byArea": {
-      "global-hub": 11840,
+      "global-hub": 11839,
       "sudan": 48,
       "ukraine": 257,
       "iran-gulf": 112,
       "united-states": 5,
-      "gaza": 4
+      "gaza": 5
     },
     "newestEventAt": "2026-09-03T18:24:00.000Z"
   },
@@ -79805,6 +79805,29 @@
         "Satellite"
       ],
       "frp": 15.97
+    },
+    {
+      "id": "un-7678d880",
+      "type": "conflict",
+      "severity": "medium",
+      "title": "Lebanon–Israel tensions escalate as Gaza sees major aid delivery",
+      "summary": "Peacekeepers in Lebanon have reported a marked deterioration in the security situation along the Blue Line of separation, with Israeli forces intensifying their military footprint in violation of a landmark Security Council resolution, UN...",
+      "region": "Gaza",
+      "groups": [
+        "Gaza",
+        "Global"
+      ],
+      "areaId": "gaza",
+      "lat": 30.9476,
+      "lon": 35.2164,
+      "eventTime": "2026-09-03T12:00:00.000Z",
+      "sourceName": "UN News",
+      "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
+      "link": "https://news.un.org/feed/view/en/story/2026/09/1168275",
+      "signals": [
+        "Conflict Events",
+        "Civilian Harm"
+      ]
     },
     {
       "id": "un-711a1174",
@@ -294774,28 +294797,6 @@
       "sourceName": "UN News",
       "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
       "link": "https://news.un.org/feed/view/en/story/2026/08/1168165",
-      "signals": [
-        "Conflict Events",
-        "Civilian Harm"
-      ]
-    },
-    {
-      "id": "un-163342a3",
-      "type": "conflict",
-      "severity": "low",
-      "title": "Lebanon: 860,000 displaced people have returned home, but humanitarian crisis remains ‘immense’",
-      "summary": "Around 860,000 people displaced by the conflict in southern Lebanon have returned, but the displacement and humanitarian crisis are “far from over,” the UN warned on Tuesday.",
-      "region": "Global",
-      "groups": [
-        "Global"
-      ],
-      "areaId": "global-hub",
-      "lat": 18.2176,
-      "lon": -27.3508,
-      "eventTime": "2026-08-18T12:00:00.000Z",
-      "sourceName": "UN News",
-      "sourceUrl": "https://news.un.org/feed/subscribe/en/news/topic/peace-and-security/feed/rss.xml",
-      "link": "https://news.un.org/feed/view/en/story/2026/08/1168163",
       "signals": [
         "Conflict Events",
         "Civilian Harm"
